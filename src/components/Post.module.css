@@ -98,11 +98,14 @@
 .commentForm footer {
     visibility: hidden;
     max-height: 0;
+
+    transition: max-height 0.3s, opacity 0.3s;
 }
 
 .commentForm:focus-within footer {
     visibility: visible;
-    max-height: none;
+    opacity: 1;
+    max-height: 15rem;
 }
 
 .commentForm button[type="submit"] {
