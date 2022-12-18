@@ -1,4 +1,5 @@
 import styles from './Post.module.css';
+import { Comment } from './Comment';
 
 const oneHourAgo = new Date(new Date().setHours(-1)).toString()
 
@@ -39,6 +40,12 @@ export const Post: React.FC = () => {
                     <button type="submit">Publish</button>
                 </footer>
             </form>
+
+            <div className={styles.commentList}>
+                <Comment />
+                <Comment />
+                <Comment />
+            </div>
         </article>
     )
 }
