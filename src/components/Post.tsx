@@ -20,8 +20,12 @@ export const Post: React.FC = () => {
             <div className={styles.content}>
                 <p>Hey guys 👋</p>
                 <p>Et nobis eos modi soluta accusantium est voluptates commodi. Voluptatem aperiam est impedit recusandae atque. Qui numquam facilis. Veritatis debitis corporis voluptatem asperiores voluptatem quo.</p>
-                <p>👉<a href="">https://github.com/arubesu/ig-feed</a></p>
-                <p><a href="">#newproject #nlw #rocketseat</a></p>
+                <p>👉&nbsp;&nbsp;&nbsp;<a href="">https://github.com/arubesu/ig-feed</a></p>
+                <p>
+                    <a href="">#newproject</a>&nbsp;
+                    <a href="">#nlw</a>&nbsp;
+                    <a href="">#rocketseat</a>
+                </p>
             </div>
         </article>
     )
