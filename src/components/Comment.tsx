@@ -4,10 +4,22 @@ import { Avatar } from './Avatar';
 
 const oneHourAgo = new Date(new Date().setHours(-1)).toString()
 
-export const Comment: React.FC = () => {
+interface CommentData {
+    commentId: string;
+    content: string;
+    publishedAt: Date;
+}
+
+interface CommentProps {
+    data: CommentData;
+    onDelete: (commentId: string) => void;
+}
+
+export const Comment: React.FC<CommentProps> = ({ data, onDelete }) => {
+    const { commentId, content } = data;
     return (
         <div className={styles.comment}>
-            <Avatar hasBorder={false} src="https://github.com/arubesu.png"  />
+            <Avatar hasBorder={false} src="https://github.com/arubesu.png" />
 
             <div className={styles.commentBox}>
                 <div className={styles.commentContent}>
@@ -17,12 +29,15 @@ export const Comment: React.FC = () => {
                             <time title={oneHourAgo} dateTime={oneHourAgo}> 1h ago</time>
                         </div>
 
-                        <button title="Delete comment">
+                        <button 
+                            onClick={() => onDelete(commentId)}
+                        title="Delete comment">
+
                             <Trash size={24} />
                         </button>
                     </header>
 
-                    <p>dolor aliquid ut 👏👏</p>
+                    <p>{content}</p>
                 </div>
 
                 <footer>
