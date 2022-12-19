@@ -1,0 +1,73 @@
+{
+    "posts" : [
+    {
+        "id": "31a234a2-5983-4cd7-bda2-d3867483bfe7",
+        "author": {
+            "avatarUrl": "https://randomuser.me/api/portraits/women/75.jpg",
+            "name": "Jessica Kilback",
+            "role": "Marketing Analyst"
+        },
+        "content": [
+            {
+                "type": "paragraph",
+                "content": "Quia minima dignissimos fugiat."
+            },
+            {
+                "type": "paragraph",
+                "content": "Porro dolor provident. Aliquid magni atque vel et temporibus. Quo saepe odit quia eligendi consequuntur at accusamus enim et. Eum atque omnis. Fugiat voluptas debitis numquam omnis officiis nesciunt quia dolor illo."
+            },
+            {
+                "type": "link",
+                "content": "https://github.com/arubesu"
+            }
+        ],
+        "publishedAt": "2022-12-18T01:20:02.976Z"
+    },
+    {
+        "id": "d43db679-93d7-440c-969e-af2240bf3702",
+        "author": {
+            "avatarUrl": "https://randomuser.me/api/portraits/women/25.jpg",
+            "name": "Hilla toro",
+            "role": "Web Developer"
+        },
+        "content": [
+            {
+                "type": "paragraph",
+                "content": "Quia minima dignissimos fugiat."
+            },
+            {
+                "type": "paragraph",
+                "content": "Porro dolor provident. Aliquid magni atque vel et temporibus. Quo saepe odit quia eligendi consequuntur at accusamus enim et. Eum atque omnis. Fugiat voluptas debitis numquam omnis officiis nesciunt quia dolor illo."
+            },
+            {
+                "type": "link",
+                "content": "https://github.com/arubesu"
+            }
+        ],
+        "publishedAt": "2022-12-17T15:19:14.966Z"
+    },
+    {
+        "id": "9c8e5faa-fcf9-4de7-b563-607219439407",
+        "author": {
+            "avatarUrl": "https://randomuser.me/api/portraits/men/25.jpg",
+            "name": "Brad Beier",
+            "role": "Software Engineer"
+        },
+        "content": [
+            {
+                "type": "paragraph",
+                "content": "Quia minima dignissimos fugiat."
+            },
+            {
+                "type": "paragraph",
+                "content": "Porro dolor provident. Aliquid magni atque vel et temporibus. Quo saepe odit quia eligendi consequuntur at accusamus enim et. Eum atque omnis. Fugiat voluptas debitis numquam omnis officiis nesciunt quia dolor illo."
+            },
+            {
+                "type": "link",
+                "content": "https://github.com/arubesu"
+            }
+        ],
+        "publishedAt": "2022-12-15T01:18:22.482Z"
+    }
+]
+}
