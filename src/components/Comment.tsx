@@ -1,12 +1,13 @@
 import styles from './Comment.module.css';
 import { HandsClapping, Trash } from 'phosphor-react';
+import { Avatar } from './Avatar';
 
 const oneHourAgo = new Date(new Date().setHours(-1)).toString()
 
 export const Comment: React.FC = () => {
     return (
         <div className={styles.comment}>
-            <img src="https://github.com/arubesu.png" alt="" />
+            <Avatar hasBorder={false} src="https://github.com/arubesu.png"  />
 
             <div className={styles.commentBox}>
                 <div className={styles.commentContent}>

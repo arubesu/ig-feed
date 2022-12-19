@@ -1,5 +1,6 @@
 import styles from './Post.module.css';
 import { Comment } from './Comment';
+import { Avatar } from './Avatar';
 
 const oneHourAgo = new Date(new Date().setHours(-1)).toString()
 
@@ -8,7 +9,7 @@ export const Post: React.FC = () => {
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <img className={styles.avatar} src="https://github.com/arubesu.png" />
+                    <Avatar  src="https://github.com/arubesu.png" />
                     <div className={styles.authorInfo}>
                         <strong>Bruno Souza</strong>
                         <span>Web Developer</span>
