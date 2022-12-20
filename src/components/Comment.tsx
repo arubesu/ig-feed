@@ -1,6 +1,7 @@
 import styles from './Comment.module.css';
 import { HandsClapping, Trash } from 'phosphor-react';
 import { Avatar } from './Avatar';
+import { useState } from 'react';
 
 const oneHourAgo = new Date(new Date().setHours(-1)).toString()
 
@@ -17,6 +18,14 @@ interface CommentProps {
 
 export const Comment: React.FC<CommentProps> = ({ data, onDelete }) => {
     const { commentId, content } = data;
+
+    const [clapsCount, setClapsCount] = useState(0);
+
+    const handleClapping = () => {
+      setClapsCount((state) => {
+        return state + 1;
+      });
+    }
     return (
         <div className={styles.comment}>
             <Avatar hasBorder={false} src="https://github.com/arubesu.png" />
@@ -41,9 +50,9 @@ export const Comment: React.FC<CommentProps> = ({ data, onDelete }) => {
                 </div>
 
                 <footer>
-                    <button>
+                    <button onClick={handleClapping}>
                         <HandsClapping />
-                        Applaud <span>20</span>
+                        Applaud <span>{clapsCount}</span>
                     </button>
                 </footer>
             </div>

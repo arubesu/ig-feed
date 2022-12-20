@@ -2,7 +2,7 @@ import styles from './Post.module.css';
 import { Comment } from './Comment';
 import { Avatar } from './Avatar';
 import { format, parseISO, formatDistanceToNow } from 'date-fns';
-import { useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 interface Author {
@@ -41,7 +41,7 @@ export const Post: React.FC<PostProps> = ({ author, publishedAt, content }: Post
         addSuffix: true
     });
 
-    function handleCreateNewComment() {
+    function handleCreateNewComment(event: FormEvent) {
         event.preventDefault()
 
         setComments([...comments, {
@@ -53,7 +53,7 @@ export const Post: React.FC<PostProps> = ({ author, publishedAt, content }: Post
         setNewCommentText('');
     }
 
-    function handleNewCommentChange() {
+    function handleNewCommentChange(event: ChangeEvent<HTMLTextAreaElement>) {
         setNewCommentText(event.target!.value);
     }
 
@@ -62,6 +62,8 @@ export const Post: React.FC<PostProps> = ({ author, publishedAt, content }: Post
 
         setComments(newComments);
     }
+
+    const isNewCommentEmpty = newCommentText.length === 0;
 
     return (
         <article className={styles.post}>
@@ -99,7 +101,7 @@ export const Post: React.FC<PostProps> = ({ author, publishedAt, content }: Post
                 />
 
                 <footer>
-                    <button type="submit">Publish</button>
+                    <button disabled={isNewCommentEmpty} type="submit">Publish</button>
                 </footer>
             </form>
 

@@ -45,9 +45,6 @@ function App() {
         <Sidebar />
         <main>
           {posts.map(post => {
-
-            console.log(post);
-            
             return (
               <Post
                key={post.id}
