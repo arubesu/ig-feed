@@ -89,6 +89,8 @@ yarn dev
 ## ⛏️ Built Using <a name = "built_using"></a>
 
 - [React](https://reactjs.org/) 
+- [Vite](https://vitejs.dev) 
+- [Typescript](https://www.typescriptlang.org) 
 ---
 ## 🤝 How to contribute
 
